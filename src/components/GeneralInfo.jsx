@@ -30,6 +30,7 @@ export default function GeneralInfo() {
   return (
     <>
       <h2>General Information</h2>
+
       <Input
         label="First Name"
         value={information.firstName}
@@ -50,6 +51,10 @@ export default function GeneralInfo() {
         value={information.phone}
         onChange={handlePhoneChange}
       />
+
+      <h3>{fullName} </h3>
+      <h3>{information.email}</h3>
+      <h3>{information.phone} </h3>
     </>
   );
 }
