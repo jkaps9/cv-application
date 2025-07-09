@@ -1,4 +1,10 @@
 .header-row {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+  justify-items: start;
+
+  button {
+    padding: 0.3em 1em;
+  }
 }
