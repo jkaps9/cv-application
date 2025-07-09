@@ -11,6 +11,8 @@ export default function GeneralInfo() {
 
   const fullName = information.firstName + " " + information.lastName;
 
+  const [isEditing, setIsEditing] = useState(true);
+
   function handleFirstNameChange(e) {
     setInformation({ ...information, firstName: e.target.value });
   }
@@ -27,34 +29,45 @@ export default function GeneralInfo() {
     setInformation({ ...information, phone: e.target.value });
   }
 
+  function handleClick() {
+    setIsEditing(!isEditing);
+  }
+
   return (
     <>
       <h2>General Information</h2>
+      <button onClick={handleClick}>{isEditing ? "Submit" : "Edit"}</button>
 
-      <Input
-        label="First Name"
-        value={information.firstName}
-        onChange={handleFirstNameChange}
-      />
-      <Input
-        label="Last Name"
-        value={information.lastName}
-        onChange={handleLastNameChange}
-      />
-      <Input
-        label="E-mail"
-        value={information.email}
-        onChange={handleEmailChange}
-      />
-      <Input
-        label="Phone"
-        value={information.phone}
-        onChange={handlePhoneChange}
-      />
-
-      <h3>{fullName} </h3>
-      <h3>{information.email}</h3>
-      <h3>{information.phone} </h3>
+      {isEditing ? (
+        <div>
+          <Input
+            label="First Name"
+            value={information.firstName}
+            onChange={handleFirstNameChange}
+          />
+          <Input
+            label="Last Name"
+            value={information.lastName}
+            onChange={handleLastNameChange}
+          />
+          <Input
+            label="E-mail"
+            value={information.email}
+            onChange={handleEmailChange}
+          />
+          <Input
+            label="Phone"
+            value={information.phone}
+            onChange={handlePhoneChange}
+          />
+        </div>
+      ) : (
+        <div>
+          <h3>{fullName} </h3>
+          <h3>{information.email}</h3>
+          <h3>{information.phone} </h3>
+        </div>
+      )}
     </>
   );
 }
