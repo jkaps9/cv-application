@@ -34,14 +34,8 @@ export default function Education() {
         <h2>Education</h2>
         <button onClick={handleClick}>{isEditing ? "Submit" : "Edit"}</button>
       </div>
-      {isEditing ? (
-        <div>
-          <AddEducationItem onAddItem={handleAddItem} />
-          <EducationList items={items} onDeleteItem={handleDeleteItem} />
-        </div>
-      ) : (
-        <EducationList items={items} onDeleteItem={handleDeleteItem} />
-      )}
+      {isEditing && <AddEducationItem onAddItem={handleAddItem} />}
+      <EducationList items={items} onDeleteItem={handleDeleteItem} />
     </>
   );
 }
