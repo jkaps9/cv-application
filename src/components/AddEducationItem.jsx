@@ -32,7 +32,6 @@ export default function AddItem({ onAddItem }) {
         onChange={handleAreaOfStudyChange}
       />
       <input
-        type="date"
         placeholder="Graduation Date"
         value={item.graduationDate}
         onChange={handleGraduationDateChange}
