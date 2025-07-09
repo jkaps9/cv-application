@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import GeneralInfo from "./components/GeneralInfo";
 
 function App() {
   return (
@@ -10,7 +11,10 @@ function App() {
         <h1>Create Your Own CV!</h1>
       </header>
       <main>
-        <section>{/* General Information (name, email, and phone) */}</section>
+        <section>
+          {/* General Information (name, email, and phone) */}
+          <GeneralInfo />
+        </section>
         <section>
           {/* Educational experience (school name, title of study, and date of study) */}
         </section>
