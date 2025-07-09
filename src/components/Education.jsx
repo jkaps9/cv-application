@@ -8,14 +8,14 @@ export default function Education() {
   const [items, setItems] = useState([]);
   const [isEditing, setIsEditing] = useState(true);
 
-  function handleAddItem(schoolName, areaOfStudy, graduationDate) {
+  function handleAddItem(newItem) {
     setItems([
       ...items,
       {
         id: nextId++,
-        schoolName: schoolName,
-        areaOfStudy: areaOfStudy,
-        graduationDate: graduationDate,
+        schoolName: newItem.schoolName,
+        areaOfStudy: newItem.areaOfStudy,
+        graduationDate: newItem.graduationDate,
       },
     ]);
   }
