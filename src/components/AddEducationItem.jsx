@@ -34,7 +34,7 @@ export default function AddItem({ onAddItem }) {
       <input
         type="date"
         placeholder="Graduation Date"
-        value={item.schoolName}
+        value={item.graduationDate}
         onChange={handleGraduationDateChange}
       />
       <button
