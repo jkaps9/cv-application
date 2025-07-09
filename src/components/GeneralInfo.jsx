@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Input from "./Input";
+import "../styles/GeneralInfo.css";
 
 export default function GeneralInfo() {
   const [information, setInformation] = useState({
