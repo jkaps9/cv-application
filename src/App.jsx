@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import GeneralInfo from "./components/GeneralInfo";
+import Education from "./components/Education";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         </section>
         <section>
           {/* Educational experience (school name, title of study, and date of study) */}
+          <Education />
         </section>
         <section>
           {/* Practical experience (company name, position title, main responsibilities of your jobs, date from and until when you worked for that company) */}
