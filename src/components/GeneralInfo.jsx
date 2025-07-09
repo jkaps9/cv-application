@@ -35,9 +35,10 @@ export default function GeneralInfo() {
 
   return (
     <>
-      <h2>General Information</h2>
-      <button onClick={handleClick}>{isEditing ? "Submit" : "Edit"}</button>
-
+      <div className="header-row">
+        <h2>General Information</h2>
+        <button onClick={handleClick}>{isEditing ? "Submit" : "Edit"}</button>
+      </div>
       {isEditing ? (
         <div>
           <Input
