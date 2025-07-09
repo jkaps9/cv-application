@@ -3,7 +3,7 @@ export default function EducationList({ items, onDeleteItem, isEditing }) {
     <ul>
       {items.map((item) => (
         <li key={item.id}>
-          <p>{item.schoolName}</p>
+          {item.schoolName}
           {isEditing && (
             <button onClick={() => onDeleteItem(item.id)}>Delete</button>
           )}

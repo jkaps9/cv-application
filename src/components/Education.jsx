@@ -2,6 +2,7 @@ import { useState } from "react";
 import Input from "./Input";
 import EducationList from "./EducationList";
 import AddEducationItem from "./AddEducationItem";
+import "../styles/Education.css";
 
 let nextId = 0;
 export default function Education() {
