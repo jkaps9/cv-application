@@ -20,7 +20,7 @@ export default function AddItem({ onAddItem }) {
   }
 
   return (
-    <>
+    <div className="add-education">
       <label>
         School Name
         <input
@@ -57,6 +57,6 @@ export default function AddItem({ onAddItem }) {
       >
         Add
       </button>
-    </>
+    </div>
   );
 }
