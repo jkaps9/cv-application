@@ -4,9 +4,16 @@ import EducationList from "./EducationList";
 import AddEducationItem from "./AddEducationItem";
 import "../styles/Education.css";
 
-let nextId = 0;
+let nextId = 1;
 export default function Education() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState([
+    {
+      id: 0,
+      schoolName: "MIT",
+      areaOfStudy: "Computer Science",
+      graduationDate: "May 2013",
+    },
+  ]);
   const [isEditing, setIsEditing] = useState(true);
 
   function handleAddItem(newItem) {
