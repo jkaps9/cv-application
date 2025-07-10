@@ -12,7 +12,7 @@ export default function GeneralInfo() {
 
   const fullName = information.firstName + " " + information.lastName;
 
-  const [isEditing, setIsEditing] = useState(true);
+  const [isEditing, setIsEditing] = useState(false);
 
   function handleFirstNameChange(e) {
     setInformation({ ...information, firstName: e.target.value });
@@ -41,7 +41,7 @@ export default function GeneralInfo() {
         <button onClick={handleClick}>{isEditing ? "Submit" : "Edit"}</button>
       </div>
       {isEditing ? (
-        <div>
+        <div className="input-form">
           <Input
             label="First Name"
             value={information.firstName}
@@ -64,7 +64,7 @@ export default function GeneralInfo() {
           />
         </div>
       ) : (
-        <div>
+        <div className="display-container">
           <h3>{fullName} </h3>
           <h3>{information.email}</h3>
           <h3>{information.phone} </h3>

@@ -21,21 +21,30 @@ export default function AddItem({ onAddItem }) {
 
   return (
     <>
-      <input
-        placeholder="School Name"
-        value={item.schoolName}
-        onChange={handleNameChange}
-      />
-      <input
-        placeholder="Area of Study"
-        value={item.areaOfStudy}
-        onChange={handleAreaOfStudyChange}
-      />
-      <input
-        placeholder="Graduation Date"
-        value={item.graduationDate}
-        onChange={handleGraduationDateChange}
-      />
+      <label>
+        School Name
+        <input
+          placeholder="School Name"
+          value={item.schoolName}
+          onChange={handleNameChange}
+        />
+      </label>
+      <label>
+        Area of Study
+        <input
+          placeholder="Area of Study"
+          value={item.areaOfStudy}
+          onChange={handleAreaOfStudyChange}
+        />
+      </label>
+      <label>
+        Graduation Date
+        <input
+          placeholder="Graduation Date"
+          value={item.graduationDate}
+          onChange={handleGraduationDateChange}
+        />
+      </label>
       <button
         onClick={() => {
           setItem({
