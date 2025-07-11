@@ -22,11 +22,11 @@ export default function AddItem({ onAddItem }) {
   }
 
   function handleEndDateChange(e) {
-    setItem({ ...item, startDate: e.target.value });
+    setItem({ ...item, endDate: e.target.value });
   }
 
   function handleResponsibilitiesChange(e) {
-    setItem({ ...item, startDate: e.target.value });
+    setItem({ ...item, responsibilities: e.target.value });
   }
 
   return (
