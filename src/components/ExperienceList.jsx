@@ -1,4 +1,9 @@
-export default function ExperienceList({ items, onDeleteItem, isEditing }) {
+export default function ExperienceList({
+  items,
+  onDeleteItem,
+  onEditItem,
+  isEditing,
+}) {
   return (
     <ul>
       {items.map((item) => (
@@ -13,7 +18,7 @@ export default function ExperienceList({ items, onDeleteItem, isEditing }) {
                 >
                   Delete
                 </button>
-                <button onClick={() => onDeleteItem(item.id)}>Edit</button>
+                <button onClick={() => onEditItem(item.id)}>Edit</button>
               </div>
             )}
           </div>
