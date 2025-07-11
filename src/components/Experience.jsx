@@ -13,7 +13,7 @@ export default function Experience() {
       positionTitle: "Software Engineer",
       startDate: "June 2013",
       endDate: "September 2022",
-      responsibilities: "Design, develop, test, deploy, maintain, and improve software using production principles.\nManage individual project priorities, deadlines, and deliverables.\nWork with the cross-functional team partners to understand their requirements and build the products to meet those requirements.\nDevelop and maintain security services to manage security artifacts used by GGN&I network. \nDesign and implement workflows for automating bootstrapping, upgrades, and turnup of networking gear."
+      responsibilities: "Design, develop, test, deploy, maintain, and improve software using production principles. Manage individual project priorities, deadlines, and deliverables. Work with the cross-functional team partners to understand their requirements and build the products to meet those requirements. Develop and maintain security services to manage security artifacts used by GGN&I network. Design and implement workflows for automating bootstrapping, upgrades, and turnup of networking gear."
     },
   ]);
   const [isEditing, setIsEditing] = useState(true);

@@ -4,13 +4,14 @@ export default function ExperienceList({ items, onDeleteItem, isEditing }) {
       {items.map((item) => (
         <li key={item.id}>
           <div className="header-row">
-            <h3>{item.schoolName}</h3>
+            <h3>{item.companyName}</h3>
             {isEditing && (
               <button onClick={() => onDeleteItem(item.id)}>Delete</button>
             )}
           </div>
-          <p>{item.areaOfStudy}</p>
-          <p>{item.graduationDate}</p>
+          <p>{item.positionTitle}</p>
+          <p>{item.startDate}{item.endDate!==null? ' - '+item.endDate:''}</p>
+          <p className="responsibilities">{item.responsibilities}</p>
         </li>
       ))}
     </ul>
