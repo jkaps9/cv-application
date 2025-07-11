@@ -10,7 +10,10 @@ export default function ExperienceList({ items, onDeleteItem, isEditing }) {
             )}
           </div>
           <p>{item.positionTitle}</p>
-          <p>{item.startDate}{item.endDate!==null? ' - '+item.endDate:''}</p>
+          <p>
+            {item.startDate}
+            {item.endDate !== null ? " - " + item.endDate : ""}
+          </p>
           <p className="responsibilities">{item.responsibilities}</p>
         </li>
       ))}

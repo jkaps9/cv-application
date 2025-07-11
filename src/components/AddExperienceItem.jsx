@@ -54,7 +54,7 @@ export default function AddItem({ onAddItem }) {
           value={item.startDate}
           onChange={handleStartDateChange}
         />
-        </label>
+      </label>
       <label>
         End Date
         <input
@@ -80,7 +80,7 @@ export default function AddItem({ onAddItem }) {
             positionTitle: "",
             startDate: "",
             endDate: "",
-            responsibilities: ""
+            responsibilities: "",
           });
           onAddItem(item);
         }}
