@@ -9,9 +9,11 @@ export default function Experience() {
   const [items, setItems] = useState([
     {
       id: 0,
-      schoolName: "MIT",
-      areaOfStudy: "Computer Science",
-      graduationDate: "May 2013",
+      companyName: "Google",
+      positionTitle: "Software Engineer",
+      startDate: "June 2013",
+      endDate: "September 2022",
+      responsibilities: "Design, develop, test, deploy, maintain, and improve software using production principles.\nManage individual project priorities, deadlines, and deliverables.\nWork with the cross-functional team partners to understand their requirements and build the products to meet those requirements.\nDevelop and maintain security services to manage security artifacts used by GGN&I network. \nDesign and implement workflows for automating bootstrapping, upgrades, and turnup of networking gear."
     },
   ]);
   const [isEditing, setIsEditing] = useState(true);
@@ -21,9 +23,11 @@ export default function Experience() {
       ...items,
       {
         id: nextId++,
-        schoolName: newItem.schoolName,
-        areaOfStudy: newItem.areaOfStudy,
-        graduationDate: newItem.graduationDate,
+        companyName: newItem.companyName,
+        positionTitle: newItem.positionTitle,
+        startDate: newItem.startDate,
+        endDate: newItem.endDate,
+        responsibilities: newItem.responsibilities
       },
     ]);
   }

@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import GeneralInfo from "./components/GeneralInfo";
 import Education from "./components/Education";
+import Experience from "./components/Experience";
 
 function App() {
   return (
@@ -16,12 +17,15 @@ function App() {
           {/* General Information (name, email, and phone) */}
           <GeneralInfo />
         </section>
+        <hr />
         <section>
           {/* Educational experience (school name, title of study, and date of study) */}
           <Education />
         </section>
+        <hr />
         <section>
           {/* Practical experience (company name, position title, main responsibilities of your jobs, date from and until when you worked for that company) */}
+          <Experience />
         </section>
       </main>
 
