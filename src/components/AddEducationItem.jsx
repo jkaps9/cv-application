@@ -20,7 +20,7 @@ export default function AddItem({ onAddItem }) {
   }
 
   return (
-    <div className="add-education">
+    <div className="form-fields">
       <label>
         School Name
         <input

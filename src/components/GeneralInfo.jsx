@@ -41,7 +41,7 @@ export default function GeneralInfo() {
         <button onClick={handleClick}>{isEditing ? "Submit" : "Edit"}</button>
       </div>
       {isEditing ? (
-        <div className="input-form">
+        <div className="form-fields">
           <Input
             label="First Name"
             value={information.firstName}

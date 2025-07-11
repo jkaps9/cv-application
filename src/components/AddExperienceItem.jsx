@@ -30,7 +30,7 @@ export default function AddItem({ onAddItem }) {
   }
 
   return (
-    <div className="add-experience">
+    <div className="form-fields">
       <label>
         Company
         <input
