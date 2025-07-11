@@ -18,7 +18,7 @@ export default function ExperienceList({
                 >
                   Delete
                 </button>
-                <button onClick={() => onEditItem(item.id)}>Edit</button>
+                {/* <button onClick={() => onEditItem(item.id)}>Edit</button> */}
               </div>
             )}
           </div>

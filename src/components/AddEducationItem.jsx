@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-export default function AddItem({ onAddItem }) {
+export default function AddItem({ onAddItem, editItem }) {
+  console.log(editItem);
   const [item, setItem] = useState({
     schoolName: "",
     areaOfStudy: "",

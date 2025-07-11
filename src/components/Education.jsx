@@ -15,6 +15,7 @@ export default function Education() {
     },
   ]);
   const [isEditing, setIsEditing] = useState(true);
+  const [editId, setEditId] = useState(null);
 
   function handleAddItem(newItem) {
     setItems([
@@ -32,6 +33,13 @@ export default function Education() {
     setItems(items.filter((item) => item.id !== itemId));
   }
 
+  function handleEditItem(eId) {
+    setEditId(eId);
+  }
+
+  const editItem =
+    editId === null ? null : items.filter((item) => item.id === editId);
+
   function handleClick() {
     setIsEditing(!isEditing);
   }
@@ -42,10 +50,13 @@ export default function Education() {
         <h2>Education</h2>
         <button onClick={handleClick}>{isEditing ? "Submit" : "Edit"}</button>
       </div>
-      {isEditing && <AddEducationItem onAddItem={handleAddItem} />}
+      {isEditing && (
+        <AddEducationItem onAddItem={handleAddItem} editItem={editItem} />
+      )}
       <EducationList
         items={items}
         onDeleteItem={handleDeleteItem}
+        onEditItem={handleEditItem}
         isEditing={isEditing}
       />
     </>
