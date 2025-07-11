@@ -6,7 +6,15 @@ export default function EducationList({ items, onDeleteItem, isEditing }) {
           <div className="header-row">
             <h3>{item.schoolName}</h3>
             {isEditing && (
-              <button onClick={() => onDeleteItem(item.id)}>Delete</button>
+              <div className="btn-container">
+                <button
+                  classname="delete-btn"
+                  onClick={() => onDeleteItem(item.id)}
+                >
+                  Delete
+                </button>
+                <button onClick={() => onDeleteItem(item.id)}>Edit</button>
+              </div>
             )}
           </div>
           <p>{item.areaOfStudy}</p>
