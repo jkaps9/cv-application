@@ -65,10 +65,12 @@ export default function AddItem({ onAddItem }) {
       </label>
       <label>
         Responsibilities
-        <input
+        <textarea
           placeholder="Responsibilities"
           value={item.responsibilities}
           onChange={handleResponsibilitiesChange}
+          rows={5}
+          cols={33}
         />
       </label>
       <button

@@ -9,7 +9,8 @@
   }
 }
 
-label > input {
+label > input,
+label > textarea {
   display: block;
 }
 
