@@ -2,55 +2,83 @@ import { useState } from "react";
 
 export default function AddItem({ onAddItem }) {
   const [item, setItem] = useState({
-    schoolName: "",
-    areaOfStudy: "",
-    graduationDate: "",
+    companyName: "",
+    positionTitle: "",
+    startDate: "",
+    endDate: "",
+    responsibilities: "",
   });
 
   function handleNameChange(e) {
-    setItem({ ...item, schoolName: e.target.value });
+    setItem({ ...item, companyName: e.target.value });
   }
 
-  function handleAreaOfStudyChange(e) {
-    setItem({ ...item, areaOfStudy: e.target.value });
+  function handlePositionTitleChange(e) {
+    setItem({ ...item, positionTitle: e.target.value });
   }
 
-  function handleGraduationDateChange(e) {
-    setItem({ ...item, graduationDate: e.target.value });
+  function handleStartDateChange(e) {
+    setItem({ ...item, startDate: e.target.value });
+  }
+
+  function handleEndDateChange(e) {
+    setItem({ ...item, startDate: e.target.value });
+  }
+
+  function handleResponsibilitiesChange(e) {
+    setItem({ ...item, startDate: e.target.value });
   }
 
   return (
     <div className="add-experience">
       <label>
-        School Name
+        Company
         <input
-          placeholder="School Name"
-          value={item.schoolName}
+          placeholder="Company"
+          value={item.companyName}
           onChange={handleNameChange}
         />
       </label>
       <label>
-        Area of Study
+        Position
         <input
-          placeholder="Area of Study"
-          value={item.areaOfStudy}
-          onChange={handleAreaOfStudyChange}
+          placeholder="Position"
+          value={item.positionTitle}
+          onChange={handlePositionTitleChange}
         />
       </label>
       <label>
-        Graduation Date
+        Start Date
         <input
-          placeholder="Graduation Date"
-          value={item.graduationDate}
-          onChange={handleGraduationDateChange}
+          placeholder="Start Date"
+          value={item.startDate}
+          onChange={handleStartDateChange}
+        />
+        </label>
+      <label>
+        End Date
+        <input
+          placeholder="End Date"
+          value={item.endDate}
+          onChange={handleEndDateChange}
+        />
+      </label>
+      <label>
+        Responsibilities
+        <input
+          placeholder="Responsibilities"
+          value={item.responsibilities}
+          onChange={handleResponsibilitiesChange}
         />
       </label>
       <button
         onClick={() => {
           setItem({
-            schoolName: "",
-            areaOfStudy: "",
-            graduationDate: "",
+            companyName: "",
+            positionTitle: "",
+            startDate: "",
+            endDate: "",
+            responsibilities: ""
           });
           onAddItem(item);
         }}
